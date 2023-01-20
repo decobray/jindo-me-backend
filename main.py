@@ -15,10 +15,7 @@ app = FastAPI()
 # ----------------------------------- 
 
 # Allow CORS 
-origins = [
-    "http://localhost:3000",
-    "http://localhost:8080",
-    "http://www.jindo.me"
+origins = [*
 ]
 
 app.add_middleware(
