@@ -5,9 +5,9 @@ import uvicorn
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 
-# API KEY and URL 
-STIBEE_API_KEY = "ca1c4f9070c852e524c1a9128e7f656e4ffb39c7ff4d3bc0f22224c3a7941bdc6ae484624ff861ff2ada925c1277222320b9279c2cea8c0cabbcc5412b8498da"
-STIBEE_URL = "https://api.stibee.com/v1"
+# 
+from config import *
+
 
 app = FastAPI()
 
@@ -63,8 +63,6 @@ def subscribeStibee(form : SubscribeForm):
     return (res.content)
 
 
-
-
-#  at last, the bottom of the file/module
- if __name__ == "__main__":
-     uvicorn.run(app, host="127.0.0.1", port=8080)
+# #  at last, the bottom of the file/module
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="127.0.0.1", port=8080)
