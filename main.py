@@ -5,7 +5,6 @@ import uvicorn
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 
-# 
 from config import *
 
 
@@ -33,6 +32,7 @@ class SubscribeForm(BaseModel) :
     name : Optional[str] = None
     STIBEE_LISTID : str
     STIBEE_GROUPID : str
+
 
 @app.get("/")
 def root(): 
@@ -64,5 +64,5 @@ def subscribeStibee(form : SubscribeForm):
 
 
 # #  at last, the bottom of the file/module
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="127.0.0.1", port=8080)
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8080)
